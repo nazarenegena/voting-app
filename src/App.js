@@ -1,4 +1,4 @@
-import "./App.css";
+import "../src/styles/App.css";
 import Dashboard from "./sections/Dashboard";
 import LandingPage from "./sections/LandingPage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
