@@ -6,7 +6,13 @@ import titleIcon from "../Images/online.png";
 const Navbar = () => {
   return (
     <div className="navbar">
-      <img src={titleIcon} alt="title" width={60} fill={40} />
+      <img
+        src={titleIcon}
+        alt="title"
+        width={60}
+        fill={40}
+        className="title-icon"
+      />
 
       <div className="mid-navbar">
         <a href="#about" className="about">
