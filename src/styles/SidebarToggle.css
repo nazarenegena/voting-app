@@ -1,0 +1,103 @@
+@media only screen and (min-width: 768px){
+    .sidebar-toggle {
+            display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+.sidebar-toggle {
+    display: flex;
+    justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  height: 60px;
+  padding: 10px 2rem;
+
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.sidebar-items {
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+        padding-top: 6rem;
+          list-style: none;
+
+
+
+}
+.close {
+    margin-bottom: 10px;
+}
+.sidebar-items li {
+      padding-bottom: 1rem;
+
+}
+.sidebar-items a {
+  color: #333;
+  text-decoration: none;
+}
+
+.humburger {
+      margin-right: 3rem;
+
+}
+
+
+   .side-start-link {
+ text-decoration: none;
+color: white;      
+}
+
+
+.side-login {
+    border: 1px solid #DF5173;
+    color: #DF5173;
+       width: 7rem;
+       height: 2rem;
+       border-radius: 8px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+            margin-right: 3rem;
+
+}
+.side-login:hover {
+    background-color: #DF5173;
+    color: white;      
+
+}
+.side-register {
+     
+     color: #DF5173;
+     border: 1px solid #DF5173;
+       width: 7rem;
+       height: 2rem;
+       border-radius: 8px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+            margin-right: 3rem;
+            background-color: red;
+
+}
+
+
+
+.side-register:hover {
+            background-color: rgb(94, 255, 0);
+     border: 1px solid #DF5173;
+     color: #DF5173;
+    
+}
+.side-login:hover {
+    background-color: blue;
+}
+
+     
+}
