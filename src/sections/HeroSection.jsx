@@ -12,12 +12,12 @@ const HeroSection = () => {
         <div className="hero-img">
           <img src={OnlineWorld} alt="hero" />
         </div>
-        <p className="hero-title">
+        <div className="hero-title">
           Welcome To <span>Vote Sphere</span>
           <p className="phrase">
             Navigate Your Voice, Shape the Future with VoteSphere ...
           </p>
-        </p>
+        </div>
       </div>
       <div className="mini-section">
         <p className="mini-phrase">

@@ -1,4 +1,5 @@
-.navbar {
+@media only screen and (min-width: 768px){
+    .navbar {
 padding-left: 1rem;
   padding-right: 1rem;
       padding-top: 1rem;
@@ -12,28 +13,7 @@ padding-left: 1rem;
     left: 0;
     width: 100%;
                 background-color: #ffffff;
-
-
-
-    
 }
-
-
-/* Small devices (portrait tablets and large phones, 600px and up)  */
-/* @media only screen and (min-width: 600px)  {
-    .navbar {
-        background-color: #e0236c;
-    }
-} */
-
-
-/* small devices (phones, 600px and down) */
-/* @media only screen and (max-width: 600px)  {
-    .navbar {
-        background-color: #236fe0;
-    }
-} */
-
 
 .title {
         color: #747474;
@@ -112,3 +92,109 @@ color: white;
      color: #DF5173;
     
 }
+
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 760px) { .navbar {
+padding-left: 1rem;
+  padding-right: 1rem;
+      padding-top: 1rem;
+          display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+        align-items: center;
+        box-shadow: #75565c 0px 15px 12px -20px;
+         position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+                background-color: #ffffff;
+}
+
+
+.mid-navbar {
+        display: flex;
+        margin-left: 5rem;
+
+
+}
+.mid-navbar a {
+    margin: 0 1rem;
+    font-size: 0.91rem;
+color: #747474;
+text-decoration: none;
+}
+
+.mid-navbar a:hover {
+    cursor: pointer;
+    color: #e0236c;
+    border-bottom:1px solid #e0236c;
+}
+
+
+
+.auth-navbar {
+    display: flex;
+}
+.start-link {
+ text-decoration: none;
+color: white;      
+}
+
+.login {
+    border: 1px solid #DF5173;
+    color: #DF5173;
+       width: 5rem;
+       height: 2rem;
+       border-radius: 3px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+            margin-right: 3rem;
+                font-size: 0.91rem;
+
+
+}
+.login:hover {
+    background-color: #DF5173;
+    color: white;      
+
+}
+.register {
+     
+     background-color: #DF5173;
+     border: 1px solid #DF5173;
+       width: 5rem;
+       height: 2rem;
+       border-radius: 3px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+            margin-right: 3rem;
+                font-size: 0.91rem;
+
+
+}
+
+
+
+.register:hover {
+            background-color: #fff6f8;
+
+     border: 1px solid #DF5173;
+     color: #DF5173;
+    
+}
+}
+
+@media only screen and (max-width: 600px) {
+   .navbar {
+    display: none;
+   }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+
+
+
