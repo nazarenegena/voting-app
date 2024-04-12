@@ -1,10 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
-const Register = () => {
+import Form from "../components/Form";
+
+const Register = ({ users, setUsers }) => {
   return (
-    <div>
-      <p>Register section</p>
-      <Link to="/login">Click toRegister</Link>
+    <div className="grid grid-cols-2">
+      <div className="">image</div>
+      <div>
+        <Form users={users} setUsers={setUsers} />
+      </div>
     </div>
   );
 };

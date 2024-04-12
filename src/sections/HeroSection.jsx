@@ -1,11 +1,26 @@
 import React from "react";
 import "../styles/Hero.css";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useUserAuth } from "../context/UserAuthContext";
+
 import mobileApp from "../Images/mobile-app.png";
 import OnlineVote from "../Images/online-vote.png";
 import OnlineWorld from "../Images/online-worlds.png";
 
 const HeroSection = () => {
+  const { user } = useUserAuth();
+
+  const navigate = useNavigate();
+
+  const navigateDashboard = () => {
+    if (!user) {
+      return navigate("/login");
+    } else {
+      navigate("/dashboard");
+    }
+    console.log("in dashboard ?");
+  };
+
   return (
     <>
       <div className="hero-section" id="features">
@@ -42,9 +57,10 @@ const HeroSection = () => {
             trends
             <br /> and make informed decisions about where to cast your vote.
           </p>
-          <Link to="/dashboard">
-            <button>Get Started</button>
-          </Link>
+          {/* <Link to="/dashboard"> */}
+
+          <button onClick={navigateDashboard}>Get Started</button>
+          {/* </Link> */}
         </div>
       </div>
     </>
