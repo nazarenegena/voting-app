@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useUserAuth } from "../context/UserAuthContext";
 
-const Form = () => {
+const RegisterForm = () => {
   const [name, setName] = useState("");
   const [role, setRole] = useState("");
   const [email, setEmail] = useState("");
@@ -35,24 +35,49 @@ const Form = () => {
 
   return (
     <form className="w-1/2 mt-9">
-      <p className="text-xl">Create an account</p>
+      <p className="text-2xl font-medium">Create an account</p>
 
-      <div className=" flex flex-col mt-6">
+      <div className=" flex flex-col mt-8">
         <label>Name</label>
         <input
           type="text"
           placeholder="name"
           value={name}
-          className="bg-zinc-100 mt-2 h-10 px-5 focus:outline-primary rounded"
+          className="bg-zinc-100 mt-2 h-10 px-5 focus:ring-primary focus:border-primary rounded"
           onChange={(event) => {
             setName(event.target.value);
           }}
         />
       </div>
-      <p>Role</p>
 
-      <div className=" flex flex-col mt-6">
-        Admin
+      <div className=" flex flex-col mt-10">
+        <label>Email Address</label>
+        <input
+          type="email"
+          placeholder="email"
+          value={email}
+          className="bg-zinc-100 mt-2 h-10 px-5 focus:ring-primary focus:border-primary rounded"
+          onChange={(event) => {
+            setEmail(event.target.value);
+          }}
+        />
+      </div>
+
+      <div className=" flex flex-col mt-10">
+        <label>Enter Password</label>
+        <input
+          type="password"
+          placeholder="password"
+          value={password}
+          className="bg-zinc-100 mt-2 h-10 px-5 focus:ring-primary focus:border-primary rounded"
+          onChange={(event) => {
+            setPassword(event.target.value);
+          }}
+        />
+      </div>
+      <p className="mt-8">Role</p>
+
+      <div className=" flex mt-6 align-center">
         <input
           type="radio"
           value="admin"
@@ -60,9 +85,10 @@ const Form = () => {
           onChange={(event) => {
             setRole(event.target.value);
           }}
-          className="bg-zinc-100 mt-2 h-10 px-5 focus:outline-primary rounded"
+          className="bg-zinc-100 h-6 w-6 checked:bg-primary text-primary focus:ring-primary focus:border-primary"
         />
-        Voter
+        <label className="ml-3">Admin</label>
+
         <input
           type="radio"
           value="voter"
@@ -70,47 +96,26 @@ const Form = () => {
           onChange={(event) => {
             setRole(event.target.value);
           }}
-          className="bg-zinc-100 mt-2 h-10 px-5 focus:outline-primary rounded"
+          className="bg-zinc-100 h-6 w-6 ml-8 checked:bg-primary text-primary focus:ring-primary focus:border-primary"
         />
-      </div>
-
-      <div className=" flex flex-col mt-6">
-        <label>Email Address</label>
-        <input
-          type="email"
-          placeholder="email"
-          value={email}
-          className="bg-zinc-100 mt-2 h-10 px-5 focus:outline-primary rounded"
-          onChange={(event) => {
-            setEmail(event.target.value);
-          }}
-        />
-      </div>
-      <div className=" flex flex-col mt-6">
-        <label>Enter Password</label>
-        <input
-          type="password"
-          placeholder="password"
-          value={password}
-          className="bg-zinc-100 mt-2 h-10 px-5 focus:outline-primary rounded"
-          onChange={(event) => {
-            setPassword(event.target.value);
-          }}
-        />
+        <label className="ml-3">Voter</label>
       </div>
 
       <button
         onClick={handleRegister}
-        className="mt-6 bg-primary text-white w-full h-12 rounded-lg hover:border-2 hover:border-primary hover:bg-white hover:text-primary"
+        className="mt-16 bg-primary text-white w-full h-12 rounded-lg hover:border-2 hover:border-primary hover:bg-white hover:text-primary"
       >
         Sign Up
       </button>
       <p className="text-red-500 mt-6 font-semibold text-center">{error}</p>
       <div className="p-4 box mt-3 text-center">
-        Already have an account? <Link to="/login">Sign In</Link>
+        Already have an account?{" "}
+        <Link to="/login" className="text-primary">
+          Sign In
+        </Link>
       </div>
     </form>
   );
 };
 
-export default Form;
+export default RegisterForm;
