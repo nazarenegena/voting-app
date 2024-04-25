@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useUserAuth } from "../context/UserAuthContext";
-import AdminDashboard from "./AdminDashboard";
+import AdminDashboard from "../Admin/AdminDashboard";
 import VoterDashboard from "./VoterDashboard";
 
 const Dashboard = () => {
@@ -18,10 +18,8 @@ const Dashboard = () => {
         <p>No user logged in</p>
       )}
 
-      <p>The dashboard page</p>
-
-      <Link to="/">Go home</Link>
-      <Link to="/">Log Out</Link>
+      {/* <Link to="/">Go home</Link>
+      <Link to="/">Log Out</Link> */}
     </div>
   );
 };
