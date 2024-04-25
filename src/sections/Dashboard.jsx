@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useUserAuth } from "../context/UserAuthContext";
+import AdminDashboard from "../Admin/AdminDashboard";
+import VoterDashboard from "./VoterDashboard";
 
 const Dashboard = () => {
   const { user } = useUserAuth();
@@ -8,18 +10,16 @@ const Dashboard = () => {
     <div>
       {user ? (
         user.role === "admin" ? (
-          <p>Admin Dashboard</p>
+          <AdminDashboard />
         ) : (
-          <p>Voter Dashboard</p>
+          <VoterDashboard />
         )
       ) : (
         <p>No user logged in</p>
       )}
 
-      <p>The dashboard page</p>
-
-      <Link to="/">Go home</Link>
-      <Link to="/">Log Out</Link>
+      {/* <Link to="/">Go home</Link>
+      <Link to="/">Log Out</Link> */}
     </div>
   );
 };
