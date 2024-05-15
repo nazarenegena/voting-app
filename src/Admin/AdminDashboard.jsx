@@ -5,7 +5,7 @@ import { Outlet } from "react-router-dom";
 
 const AdminDashboard = () => {
   return (
-    <div className="grid grid-cols-[14%_86%] h-screen">
+    <div className="grid grid-cols-[14%_86%] h-screen w-full">
       <AdminSidebar />
       <div className="flex flex-col">
         <DashboardNavbar />
