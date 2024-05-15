@@ -59,7 +59,7 @@ const AdminSidebar = () => {
     <div className="bg-white px-6 border border-slate-200">
       <Link to="/" className="flex mt-6 align-middle">
         <img src={titleIcon} alt="title" width={55} fill={40} />{" "}
-        <p className="mt-4 ml-2 text-zinc-700">VoteSphere</p>
+        <p className="mt-4 ml-2 text-zinc-700 hover:text-primary">VoteSphere</p>
       </Link>
 
       <div className="mt-20">
