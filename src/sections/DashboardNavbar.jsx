@@ -23,7 +23,7 @@ const DashboardNavbar = () => {
       <input
         type="email"
         placeholder="search ..."
-        className="bg-zinc-100 ml-10 mt-6 w-96 h-12 pl-14 border rounded-md border-neutral focus:ring-primary focus:border-primary"
+        className="bg-neutral ml-10 mt-6 w-96 h-12 pl-14 border rounded-md border-neutral focus:ring-primary focus:border-primary"
       />
       <div className="flex absolute top-8 right-72 ">
         <IoNotificationsOutline className="mr-10 text-zinc-700" size={24} />
